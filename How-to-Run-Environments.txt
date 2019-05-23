@@ -1,0 +1,14 @@
+/// This is the command for running an environment
+nightwatch --env default --tag desktop --config ./nightwatch.conf.js
+
+
+/////Why? Break it down:
+
+///the --env runs the environment inside of ngihtwatch.conf.js, in the conf file in this folder
+ you have an environment named "mobile" that runs chrome using the "iPhone X"
+ //"default" runs the default test environment which is just regular chrome
+
+///the --tag is the tag you gave the specific test in the test file
+    //the teslaShop.js is tagged desktop
+
+///the --config chooses the config file location

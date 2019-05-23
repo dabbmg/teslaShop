@@ -1,0 +1,6 @@
+///////////////////////////////
+//Referring to issue TESLA-38//
+///////////////////////////////
+module.exports = (browser) => {
+    browser
+}
