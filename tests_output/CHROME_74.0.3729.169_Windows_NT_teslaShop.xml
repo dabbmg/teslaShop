@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="teslaShop"
+    errors="0" failures="1" hostname="" id="" package="teslaShop" skipped="0"
+    tests="1" time="23.22" timestamp="">
+  
+    <testcase name="Headers and Filters" classname="teslaShop" time="23.22" assertions="43">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Expected element &lt;//button[@class=&#34;quick__direct__add direct__add__1036392-10-D active&#34;]&gt; to be visible - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not visible&#34;[0m">    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\Mat\DevMountain\teslaShop\test-assets\headerFilter.js:128:28)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)</failure>
+
+    <failure message="    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\Mat\DevMountain\teslaShop\test-assets\headerFilter.js:128:28)">    at processTicksAndRejections (internal/process/task_queues.js:89:5)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
