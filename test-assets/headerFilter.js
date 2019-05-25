@@ -3,9 +3,14 @@
 ///////////////////////////////
 module.exports = (browser) => {
 
-    ///////////////////////////////////////////////////////////////////
-    //////////////////////"CHARGING" HEADER TESTS//////////////////////
-    ///////////////////////////////////////////////////////////////////
+//     _____ _                     _                _    _                _             _______        _       
+//     / ____| |                   (_)              | |  | |              | |           |__   __|      | |      
+//    | |    | |__   __ _ _ __ __ _ _ _ __   __ _   | |__| | ___  __ _  __| | ___ _ __     | | ___  ___| |_ ___ 
+//    | |    | '_ \ / _` | '__/ _` | | '_ \ / _` |  |  __  |/ _ \/ _` |/ _` |/ _ \ '__|    | |/ _ \/ __| __/ __|
+//    | |____| | | | (_| | | | (_| | | | | | (_| |  | |  | |  __/ (_| | (_| |  __/ |       | |  __/\__ \ |_\__ \
+//     \_____|_| |_|\__,_|_|  \__, |_|_| |_|\__, |  |_|  |_|\___|\__,_|\__,_|\___|_|       |_|\___||___/\__|___/
+//                             __/ |         __/ |                                                              
+//                            |___/         |___/                                                               
 
     browser
     ////////////////////
@@ -172,9 +177,14 @@ module.exports = (browser) => {
     //Line 119
     browser.back()
 
-    ////////////////////////////////////////////////////////////////////////////
-    ///////////////////VEHICLE ACCESSORIES HEADER TEST//////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
+    // __      __  _     _      _                                                 _             _    _                _             _______        _       
+    // \ \    / / | |   (_)    | |          /\                                   (_)           | |  | |              | |           |__   __|      | |      
+    //  \ \  / /__| |__  _  ___| | ___     /  \   ___ ___ ___  ___ ___  ___  _ __ _  ___  ___  | |__| | ___  __ _  __| | ___ _ __     | | ___  ___| |_ ___ 
+    //   \ \/ / _ \ '_ \| |/ __| |/ _ \   / /\ \ / __/ __/ _ \/ __/ __|/ _ \| '__| |/ _ \/ __| |  __  |/ _ \/ _` |/ _` |/ _ \ '__|    | |/ _ \/ __| __/ __|
+    //    \  /  __/ | | | | (__| |  __/  / ____ \ (_| (_|  __/\__ \__ \ (_) | |  | |  __/\__ \ | |  | |  __/ (_| | (_| |  __/ |       | |  __/\__ \ |_\__ \
+    //     \/ \___|_| |_|_|\___|_|\___| /_/    \_\___\___\___||___/___/\___/|_|  |_|\___||___/ |_|  |_|\___|\__,_|\__,_|\___|_|       |_|\___||___/\__|___/
+                                                                                                                                                        
+                                                                                                                                                        
 
     ////////////////////////
     //Model 3 Best Sellers//
@@ -525,9 +535,15 @@ module.exports = (browser) => {
     .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[1]', 'Roadster')
     browser.back()
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////APPAREL HEADER TESTS/////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////
+//     _    _    _                _             _______        _       
+//     /\                              | |  | |  | |              | |           |__   __|      | |      
+//    /  \   _ __  _ __   __ _ _ __ ___| |  | |__| | ___  __ _  __| | ___ _ __     | | ___  ___| |_ ___ 
+//   / /\ \ | '_ \| '_ \ / _` | '__/ _ \ |  |  __  |/ _ \/ _` |/ _` |/ _ \ '__|    | |/ _ \/ __| __/ __|
+//  / ____ \| |_) | |_) | (_| | | |  __/ |  | |  | |  __/ (_| | (_| |  __/ |       | |  __/\__ \ |_\__ \
+// /_/    \_\ .__/| .__/ \__,_|_|  \___|_|  |_|  |_|\___|\__,_|\__,_|\___|_|       |_|\___||___/\__|___/
+//          | |   | |                                                                                   
+//          |_|   |_|     
+
 
     ////////////////////
     //Men New Arrivals//
@@ -549,8 +565,454 @@ module.exports = (browser) => {
     .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[2]', 'Full-Zip Hoodie')
     .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[3]', 'Large Wordmark Pullover')
     browser.back()
-    
-//Left to work on: Finish Apparel Men, Women and Kids -- Start Lifestyle
+    ////////////
+    //Men Tees//
+    ////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Tees")])[3]', 500, function() {
+            browser.click('(//a[contains (text(), "Tees")])[3]')
+        }, "Click Men Tees")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Men')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[2]').text.to.equal('Tees')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[4]', 'Small Wordmark Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[7]', 'Embroidery Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[10]', 'Large Wordmark Tee')
+    browser.back()
+    ///////////////////
+    //Men Sweatshirts//
+    ///////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Sweatshirts")])[3]', 500, function() {
+            browser.click('(//a[contains (text(), "Sweatshirts")])[3]')
+        }, "Click Men Sweatshirts")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Men')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[3]').text.to.equal('Sweatshirts')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[17]', 'Full-Zip Hoodie')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[18]', 'Small Wordmark Pullover')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[19]', 'Large Wordmark Pullover')
+    browser.url('https://shop.tesla.com/')
+    .pause(3000)
+    ///////////////
+    //Men Jackets//
+    ///////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Jackets")])[4]', 500, function() {
+            browser.click('(//a[contains (text(), "Jackets")])[4]')
+        }, "Click Men Jackets")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Men')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[4]').text.to.equal('Jackets')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[23]', 'Corp Jacket')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[24]', 'Soft Shell Jacket')
+    .pause(300)
+    browser.back()
+    ////////////
+    //Men Hats//
+    ////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Hats")])[4]', 500, function() {
+            browser.click('(//a[contains (text(), "Hats")])[4]')
+        }, "Click Men Hats")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Men')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[5]').text.to.equal('Hats')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[25]', 'T Logo Hat')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[31]', 'Tesla Snapback')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[32]', 'Beanie')
+    .pause(300)
+    browser.back()
+    //////////////////////
+    //Women New Arrivals//
+    //////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "New Arrivals")])[5]', 500, function() {
+            browser.click('(//a[contains (text(), "New Arrivals")])[5]')
+        }, "Click Women New Arrivals")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Women')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[1]').text.to.equal('New Arrivals')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[1]', 'Corp Jacket')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[2]', 'Full-Zip Hoodie')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[3]', 'Large Wordmark Pullover')
+    .pause(300)
+    browser.back()
+    //////////////
+    //Women Tees//
+    //////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Tees")])[4]', 500, function() {
+            browser.click('(//a[contains (text(), "Tees")])[4]')
+        }, "Click Women Tees")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Women')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[2]').text.to.equal('Tees')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[4]', 'Small Wordmark Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[7]', 'Embroidery Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[10]', 'Large Wordmark Tee')
+    .pause(300)
+    browser.back()
+    /////////////////////
+    //Women Sweatshirts//
+    /////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Sweatshirts")])[4]', 500, function() {
+            browser.click('(//a[contains (text(), "Sweatshirts")])[4]')
+        }, "Click Women Sweatshirts")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Women')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[3]').text.to.equal('Sweatshirts')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[14]', 'Full-Zip Hoodie')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[15]', 'Small Wordmark Pullover')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[16]', 'Large Wordmark Pullover')
+    browser.url('https://shop.tesla.com/')
+    .pause(2000)
+    /////////////////
+    //Women Jackets//
+    /////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Jackets")])[5]', 500, function() {
+            browser.click('(//a[contains (text(), "Jackets")])[5]')
+        }, "Click Women Jackets")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Women')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[4]').text.to.equal('Jackets')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[19]', 'Corp Jacket')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[20]', 'Soft Shell Jacket')
+    .pause(300)
+    browser.back()
+    //////////////
+    //Women Hats//
+    //////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Hats")])[5]', 500, function() {
+            browser.click('(//a[contains (text(), "Hats")])[5]')
+        }, "Click Women Hats")   
+    }),
+    browser
+    .waitForElementPresent('(//a[@class="quick__product__details active"])[1]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Women')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[5]').text.to.equal('Hats')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[21]', 'T Logo Hat')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[27]', 'Tesla Snapback')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[28]', 'Beanie')
+    .pause(300)
+    browser.back()
+    /////////////////////
+    //Kids New Arrivals//
+    /////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "New Arrivals")])[6]', 500, function() {
+            browser.click('(//a[contains (text(), "New Arrivals")])[6]')
+        }, "Click Kids New Arrivals")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[1]').text.to.equal('New Arrivals')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[1]', 'Zero Emissions')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[4]', 'Made on Earth')
+    .pause(300)
+    browser.back()
+    /////////////
+    //Kids Tops//
+    /////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Tops")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Tops")])[2]')
+        }, "Click Kids Tops")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[2]').text.to.equal('Tops')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[7]', 'T Embroidery Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[10]', 'Large Wordmark Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[13]', 'Embroidered Wordmark Tee')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[16]', 'Racing')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[19]', 'Checkered')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[21]', 'Hoodie')
+    .pause(300)
+    browser.back()
+    ////////////////
+    //Kids Onesies//
+    ////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Onesies")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Onesies")])[2]')
+        }, "Click Kids Onesies")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[3]').text.to.equal('Onesies')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[22]', 'Zero Emissions')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[25]', 'Made on Earth')
+    .pause(300)
+    browser.back()
+    ////////////////
+    //Kids Jackets//
+    ////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Jackets")])[6]', 500, function() {
+            browser.click('(//a[contains (text(), "Jackets")])[6]')
+        }, "Click Kids Jackets")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[4]').text.to.equal('Jackets')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[30]', 'Puffer Jacket')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[31]', 'Corp Jacket')
+    .pause(300)
+    browser.back()
+    /////////////
+    //Kids Toys//
+    /////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Toys")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Toys")])[2]')
+        }, "Click Kids Toys")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[5]').text.to.equal('Toys')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[32]', 'Tesla Model S for Kids')
+    .pause(300)
+    browser.back()
+    /////////////
+    //Kids Hats//
+    /////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[3]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Hats")])[6]', 500, function() {
+            browser.click('(//a[contains (text(), "Hats")])[6]')
+        }, "Click Kids Hats")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Kids')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[6]').text.to.equal('Hats')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[33]', 'Tesla Logo Hat')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[34]', 'T Logo Hat')
+    .pause(300)
+    browser.back()
+
+
+    // _      _  __          _         _         _    _                _             _______        _       
+    // | |    (_)/ _|        | |       | |       | |  | |              | |           |__   __|      | |      
+    // | |     _| |_ ___  ___| |_ _   _| | ___   | |__| | ___  __ _  __| | ___ _ __     | | ___  ___| |_ ___ 
+    // | |    | |  _/ _ \/ __| __| | | | |/ _ \  |  __  |/ _ \/ _` |/ _` |/ _ \ '__|    | |/ _ \/ __| __/ __|
+    // | |____| | ||  __/\__ \ |_| |_| | |  __/  | |  | |  __/ (_| | (_| |  __/ |       | |  __/\__ \ |_\__ \
+    // |______|_|_| \___||___/\__|\__, |_|\___|  |_|  |_|\___|\__,_|\__,_|\___|_|       |_|\___||___/\__|___/
+    //                             __/ |                                                                     
+    // 
+    //////////////////////////
+    //Lifestyle Best Sellers//
+    //////////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Best Sellers")])[8]', 500, function() {
+            browser.click('(//a[contains (text(), "Best Sellers")])[8]')
+        }, "Click Lifestyle Best Sellers")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[1]').text.to.equal('Best Sellers')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[1]', 'Powerbank')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[2]', 'Diecast 1:24 Scale Tesla Semi')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[3]', 'Diecast 1:18 Scale Model 3')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[8]', 'Tesla Wireless Phone Charger')
+    .pause(300)
+    browser.back()
+    //////////////////
+    //Lifestyle Hats//
+    //////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Hats")])[8]', 500, function() {
+            browser.click('(//a[contains (text(), "Hats")])[8]')
+        }, "Click Lifestyle Hats")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[2]').text.to.equal('Hats')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[9]', 'T Logo Hat')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[12]', 'Tesla Logo Hat')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[15]', 'Tesla Snapback')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[16]', 'Tesla Beanie')
+    .pause(300)
+    browser.back()
+    ///////////////////////////
+    //Lifestyle Collectibles //
+    ///////////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Collectibles")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Collectibles")])[2]')
+        }, "Click Lifestyle Collectibles")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[3]').text.to.equal('Collectibles')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[19]', 'Diecast 1:18 Scale Model X')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[20]', 'Diecast 1:18 Scale Model S')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[25]', 'Diecast 1:24 Scale Tesla Semi')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[26]', 'Diecast 1:18 Scale Model 3')
+    .pause(300)
+    browser.back()
+    ///////////////////
+    //Lifestyle Toys //
+    ///////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Toys")])[4]', 500, function() {
+            browser.click('(//a[contains (text(), "Toys")])[4]')
+        }, "Click Lifestyle Toys")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[4]').text.to.equal('Toys')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[31]', 'Tesla Model S for Kids')
+    .pause(300)
+    browser.back()
+    ////////////////////////
+    //Lifestyle Drinkware //
+    ////////////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Drinkware")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Drinkware")])[2]')
+        }, "Click Lifestyle Drinkware")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[5]').text.to.equal('Drinkware')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[32]', 'Starman Mug')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[33]', 'Travel Mug/Tumbler')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[35]', 'Stainless Steel')
+    .pause(300)
+    browser.back()
+    ///////////////////
+    //Lifestyle Tech //
+    ///////////////////
+    .waitForElementPresent('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 10000)
+    .moveToElement('(//li[@class="tsla-header-nav--list_item tsla-header-nav--selected"])[4]', 1, 2, function() {
+        browser.pause(300)
+        browser.waitForElementPresent('(//a[contains (text(), "Tech")])[2]', 500, function() {
+            browser.click('(//a[contains (text(), "Tech")])[2]')
+        }, "Click Lifestyle Tech")   
+    }),
+    browser
+    .waitForElementPresent('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]')
+    .expect.element('//div[@class="category-text-content category-h1-dark-color-content  heading-only"]').text.to.equal('Lifestyle')
+    browser
+    .expect.element('(//h2[@class="c-product__container__title"])[6]').text.to.equal('Tech')
+    browser
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[37]', 'Powerbank')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[38]', 'Model X Key Band')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[39]', 'Model 3 Key Band')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[40]', 'Model S Key Band')
+    .verify.containsText('(//a[@class="e-general__title c-product__list__item__title c-product__product__url active"])[41]', 'Tesla Wireless Phone Charger')
+    .pause(300)
+    browser.back()
     //Back to CSS
     .useCss()
 }
