@@ -27,8 +27,10 @@ module.exports = {
         shopPage
         .headFilt(browser)
     },
-    // 'Search Bar': browser => {
-    //     shopPage
-    //     .search(browser)
-    // },
+    'Search Bar': browser => {
+        shopPage
+        .search(browser, 'Key Band')
+        .search(browser, 'Chargers')
+        .search(browser, 'T Shirts')
+    },
 }

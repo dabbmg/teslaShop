@@ -21,8 +21,8 @@ var shopCommands = {
         headerFilter(shopPage)
         return this
     },
-    search: function(shopPage) {
-        searchBar(shopPage)
+    search: function(shopPage, searchTerm) {
+        searchBar(shopPage, searchTerm)
         return this
     }  
 }
