@@ -15,22 +15,22 @@ module.exports = {
     //     shopPage
     //     .accFeat(browser)
     // },
-    'Footers': browser => {
-        shopPage
-        .foot(browser)
-    },
-    // 'General Browsing': browser => {
+    // 'Footers': browser => {
     //     shopPage
-    //     .browse(browser)
+    //     .foot(browser)
     // },
-    'Headers and Filters': browser => {
+    'General Browsing': browser => {
         shopPage
-        .headFilt(browser)
+        .browse(browser)
     },
-    'Search Bar': browser => {
-        shopPage
-        .search(browser, 'Key Band')
-        .search(browser, 'Chargers')
-        .search(browser, 'T Shirts')
-    },
+    // 'Headers and Filters': browser => {
+    //     shopPage
+    //     .headFilt(browser)
+    // },
+    // 'Search Bar': browser => {
+    //     shopPage
+    //     .search(browser, 'Key Band')
+    //     .search(browser, 'Chargers')
+    //     .search(browser, 'T Shirts')
+    // },
 }

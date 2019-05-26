@@ -13,5 +13,4 @@ module.exports = (browser, searchTerm) => {
     browser.back()
     .clearValue('input[id="searchTerm"]')
     .pause(700)
-
 }

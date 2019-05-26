@@ -137,5 +137,4 @@ module.exports = (browser) => {
     .waitForElementPresent('a[title="Charging"]', 10000)
     .expect.element('a[title="Charging"]').to.be.present
     browser
-    
 }
