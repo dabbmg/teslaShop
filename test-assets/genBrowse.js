@@ -1,7 +1,7 @@
 ///////////////////////////////
 //Referring to issue TESLA-38//
 ///////////////////////////////
-//Works in: firefox, edge, chrome
+//Works in: firefox, chrome
 module.exports = (browser) => {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////Home Page///////////////////////////////////////////////////////////////////////
@@ -28,9 +28,9 @@ module.exports = (browser) => {
     .verify.containsText('div[class="product__container__details__quantity__value"]', '1')
     //Add to Cart
     .click('input[value="Add to Cart"]')
-    .pause(2000)
+    .pause(5000)
     .click('span[class="shopcart-modal__close-icon"]')
-    .pause(2000)
+    .pause(5000)
     browser.back()
     .click('button[id="slick-slide-control01"]')
     .pause(500)

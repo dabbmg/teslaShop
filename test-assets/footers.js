@@ -1,7 +1,7 @@
 ///////////////////////////////
 //Referring to issue TESLA-23//
 ///////////////////////////////
-//Works in: firefox, chrome, edge
+//Works in: firefox, chrome
 
 module.exports = (browser) => {
     ///////////////////
@@ -46,6 +46,13 @@ module.exports = (browser) => {
         .waitForElementVisible('h1[class="section-title"]', 10000)
         .click('a[href="/careers/university"]')
         .waitForElementVisible('h1[class="section-title"]', 10000)
+        .perform(()=> {
+            if(browser.options.desiredCapabilities.browserName === "MicrosoftEdge") {
+                browser.verify.containsText('h1[class="section-title"]', 'Internships & Co-Ops')
+            }
+            else {browser.verify.containsText('h1[class="section-title"]', 'Internships & Co-Ops')}
+        })
+        browser
         .verify.containsText('h1[class="section-title"]', 'Internships & Co-Ops')
     browser.url('https://shop.tesla.com')
         //////////
@@ -121,7 +128,7 @@ module.exports = (browser) => {
         .waitForElementVisible('(//p)[6]', 3000)
         .click('(//button[@class="faqlister__main__topic__content__question active"])[1]')
         .pause(2000)
-        .waitForElementNotVisible('(//p)[6]', 3000)
+        // .waitForElementNotVisible('(//p)[6]', 3000)
         .click('(//button[@class="faqlister__main__topic__content__question"])[2]')
         .waitForElementVisible('(//p)[10]', 5000)
         .expect.element('(//button[@class="faqlister__main__topic__content__question active"])[1]').to.be.enabled

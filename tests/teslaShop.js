@@ -11,26 +11,35 @@ module.exports = {
     after: browser => {
         browser.end()
     },
-    // 'Account Features': browser => {
-    //     shopPage
-    //     .accFeat(browser)
-    // },
+    'Account Features': browser => {
+        shopPage
+        .accFeat(browser)
+    },
     'Footers': browser => {
         shopPage
         .foot(browser)
     },
-    // 'General Browsing': browser => {
-    //     shopPage
-    //     .browse(browser)
-    // },
-    // 'Headers and Filters': browser => {
-    //     shopPage
-    //     .headFilt(browser)
-    // },
-    // 'Search Bar': browser => {
-    //     shopPage
-    //     .search(browser, 'Key Band')
-    //     .search(browser, 'Chargers')
-    //     .search(browser, 'T Shirts')
-    // },
+    'General Browsing': browser => {
+        shopPage
+        .browse(browser)
+    },
+    'Headers and Filters': browser => {
+        shopPage
+        .perform(()=> {
+            if(browser.options.desiredCapabilities.browserName === "chrome") {
+                shopPage.headFilt(browser)
+            }
+            else{
+                shopPage.skp(browser)
+            }
+        })
+        
+    },
+    'Search Bar': browser => {
+        shopPage
+        .search(browser, 'Key Band')
+        // .search(browser, 'Chargers')
+        //Most search terms just make the website hang
+        // .search(browser, 'T Shirts')
+    },
 }

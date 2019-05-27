@@ -3,6 +3,7 @@ let footers = require('../test-assets/footers')
 let genBrowse = require('../test-assets/genBrowse')
 let headerFilter = require('../test-assets/headerFilter')
 let searchBar = require('../test-assets/searchBar')
+let skip = require('../test-assets/skip')
 //
 var shopCommands = {
     accFeat: function(shopPage) {
@@ -24,7 +25,11 @@ var shopCommands = {
     search: function(shopPage, searchTerm) {
         searchBar(shopPage, searchTerm)
         return this
-    }  
+    },
+    skp: function(shopPage) {
+        skip(shopPage)
+        return this
+    }
 }
 module.exports = {
     url: 'https://shop.tesla.com',
