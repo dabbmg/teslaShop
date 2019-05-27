@@ -12,3 +12,6 @@ nightwatch --env default --tag desktop --config ./nightwatch.conf.js
     //the teslaShop.js is tagged desktop
 
 ///the --config chooses the config file location
+
+
+///Everything working in Chrome, Firefox --making edge a stretch goal

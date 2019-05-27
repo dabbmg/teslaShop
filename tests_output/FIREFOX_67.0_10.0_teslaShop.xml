@@ -5,9 +5,23 @@
 
   <testsuite name="teslaShop"
     errors="0" failures="0" hostname="" id="" package="teslaShop" skipped="0"
-    tests="1" time="8.561" timestamp="">
+    tests="1" time="27.07" timestamp="">
   
-    <testcase name="Search Bar" classname="teslaShop" time="8.561" assertions="3">
+    <testcase name="Account Features" classname="teslaShop" time="27.07" assertions="10">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
