@@ -15,14 +15,14 @@ module.exports = {
     //     shopPage
     //     .accFeat(browser)
     // },
-    // 'Footers': browser => {
-    //     shopPage
-    //     .foot(browser)
-    // },
-    'General Browsing': browser => {
+    'Footers': browser => {
         shopPage
-        .browse(browser)
+        .foot(browser)
     },
+    // 'General Browsing': browser => {
+    //     shopPage
+    //     .browse(browser)
+    // },
     // 'Headers and Filters': browser => {
     //     shopPage
     //     .headFilt(browser)

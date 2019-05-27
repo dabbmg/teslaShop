@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
+<testsuites errors="1"
             failures="0"
             tests="1">
 
   <testsuite name="teslaShop"
-    errors="0" failures="0" hostname="" id="" package="teslaShop" skipped="0"
-    tests="1" time="82.36" timestamp="">
+    errors="1" failures="0" hostname="" id="" package="teslaShop" skipped="0"
+    tests="1" time="99.49" timestamp="">
   
-    <testcase name="Footers" classname="teslaShop" time="82.36" assertions="60">
-
-    
-
-    
-
-    
+    <testcase name="Footers" classname="teslaShop" time="99.49" assertions="57">
 
     
 

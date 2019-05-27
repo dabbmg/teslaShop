@@ -1,6 +1,7 @@
 ///////////////////////////////
 //Referring to issue TESLA-20//
 ///////////////////////////////
+//Works in: chrome,
 //Terms to search:
 //"Key Band", "Chargers", "T Shirts", "Model 3"-Note This one Never actually loads
 module.exports = (browser, searchTerm) => {

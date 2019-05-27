@@ -9,6 +9,8 @@ module.exports = {
       "port" : 4445,
       "cli_args" : {
         "webdriver.chrome.driver" :  "C:\\Users\\Mat\\DevMountain\\testing-resources\\chromedriver.exe",
+        "webdriver.edge.driver" :  "C:\\Users\\Mat\\DevMountain\\testing-resources\\MicrosoftWebDriver.exe",
+        "webdriver.gecko.driver" :  "C:\\Users\\Mat\\DevMountain\\testing-resources\\geckodriver.exe",
       },
       "test_workers": {
         "enabled": true,
