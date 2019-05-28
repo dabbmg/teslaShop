@@ -1,58 +1,22 @@
-15:15:34.416 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-15:15:34.480 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4445
-2019-05-27 15:15:34.520:INFO::main: Logging initialized @250ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:15:34.684 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-15:15:34.733 ERROR [BaseServer.start] - Port 4445 is busy, please choose a free port and specify it using -port option
-Exception in thread "main" java.lang.RuntimeException: java.net.BindException: Address already in use: bind
-	at org.openqa.selenium.grid.server.BaseServer.start(BaseServer.java:221)
-	at org.openqa.selenium.remote.server.SeleniumServer.boot(SeleniumServer.java:131)
-	at org.openqa.grid.selenium.GridLauncherV3.lambda$buildLaunchers$3(GridLauncherV3.java:249)
-	at org.openqa.grid.selenium.GridLauncherV3.lambda$launch$0(GridLauncherV3.java:86)
-	at java.util.Optional.map(Unknown Source)
-	at org.openqa.grid.selenium.GridLauncherV3.launch(GridLauncherV3.java:86)
-	at org.openqa.grid.selenium.GridLauncherV3.main(GridLauncherV3.java:70)
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Unknown Source)
-	at sun.nio.ch.Net.bind(Unknown Source)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
-	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
-	at org.seleniumhq.jetty9.server.ServerConnector.openAcceptChannel(ServerConnector.java:339)
-	at org.seleniumhq.jetty9.server.ServerConnector.open(ServerConnector.java:307)
-	at org.seleniumhq.jetty9.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
-	at org.seleniumhq.jetty9.server.ServerConnector.doStart(ServerConnector.java:235)
-	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.seleniumhq.jetty9.server.Server.doStart(Server.java:395)
-	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-	at org.openqa.selenium.grid.server.BaseServer.start(BaseServer.java:202)
-	... 6 more
-st: Invalid extension permission: about:reader*
-1558991737111	Marionette	INFO	Listening on port 55278
-15:15:37.345 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-15:15:37.494 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
-15:15:37.506 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 7b50b2fd-62c5-433f-9892-def40cd20894 (org.openqa.selenium.firefox.GeckoDriverService)
-15:15:37.526 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 5c84c0ab040f0752f20d872247a16f94 (org.openqa.selenium.chrome.ChromeDriverService)
-console.error: BroadcastService: 
-  receivedBroadcastMessage: handler for
-  remote-settings/monitor_changes
-  threw error:
-  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221558976967835%22 is not a valid URL..
-  Stack:
-    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
-
-15:16:04.053 INFO [ActiveSessions$1.onStop] - Removing session 5c84c0ab040f0752f20d872247a16f94 (org.openqa.selenium.chrome.ChromeDriverService)
-1558991764586	Marionette	INFO	Stopped listening on port 55278
-[Child 14936, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 14936, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/srJavaScript error: https://shop.tesla.com/etc/clientlibs/tesla-commerce.573b8e16f57cca2bfab5a53f1e643a98.js, line 2: NS_ERROR_NOT_INITIALIZED: 
-[Child 12912, Chrome_ChildThread] WARNING: pipe error: 232: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 502
-[Child 12912, Chrome_ChildThread]
-###!!! [Child][MessageChannel] Error: (msgtype=0x53000D,name=PHttpChannel::Msg_RemoveCorsPreflightCacheEntry) Closed channel: cannot send/recv
-
- WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chr[Parent 2920, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
-GPU 15032
-###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
-
-15:16:05.149 INFO [ActiveSessions$1.onStop] - Removing session 7b50b2fd-62c5-433f-9892-def40cd20894 (org.openqa.selenium.firefox.GeckoDriverService)
+18:49:27.733 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+18:49:27.794 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4445
+2019-05-27 18:49:27.823:INFO::main: Logging initialized @228ms to org.seleniumhq.jetty9.util.log.StdErrLog
+18:49:27.954 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+18:49:28.037 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
+18:49:28.337 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
+  "browserName": "chrome",
+  "chromeOptions": {
+    "mobileEmulation": {
+      "deviceName": "iPhone X"
+    }
+  },
+  "name": "Tesla Shop M"
+}
+18:49:28.338 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 17579
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+18:49:30.538 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+18:49:30.701 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 5c7148ba01876352f97bc41159ff142f (org.openqa.selenium.chrome.ChromeDriverService)
+18:49:55.747 INFO [ActiveSessions$1.onStop] - Removing session 5c7148ba01876352f97bc41159ff142f (org.openqa.selenium.chrome.ChromeDriverService)

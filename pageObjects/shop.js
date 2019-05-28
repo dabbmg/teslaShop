@@ -4,6 +4,7 @@ let genBrowse = require('../test-assets/genBrowse')
 let headerFilter = require('../test-assets/headerFilter')
 let searchBar = require('../test-assets/searchBar')
 let skip = require('../test-assets/skip')
+let genBrowseMobile = require('../test-assets/genBrowseMobile')
 //
 var shopCommands = {
     accFeat: function(shopPage) {
@@ -28,6 +29,10 @@ var shopCommands = {
     },
     skp: function(shopPage) {
         skip(shopPage)
+        return this
+    },
+    mobile: function(shopPage) {
+        genBrowseMobile(shopPage)
         return this
     }
 }

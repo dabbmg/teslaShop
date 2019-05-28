@@ -37,7 +37,12 @@ module.exports = {
     },
     'Search Bar': browser => {
         shopPage
-        .search(browser, 'Key Band')
+        .perform(()=> {
+            if(browser.options.desiredCapabilities.browserName === "chrome") {
+                shopPage.search(browser, 'Key Band')
+            }
+            else{shopPage.skp(browser)}
+        })
         // .search(browser, 'Chargers')
         //Most search terms just make the website hang
         // .search(browser, 'T Shirts')

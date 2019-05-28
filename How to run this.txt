@@ -1,0 +1,1 @@
+//Command: nightwatch -e default,firefox -t tests/teslaShop.js && nightwatch -e mobile --tag mobile
