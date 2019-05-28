@@ -1,1 +1,3 @@
-//Command: nightwatch -e default,firefox -t tests/teslaShop.js && nightwatch -e mobile --tag mobile
+//Command: nightwatch -e default -t tests/teslaShop.js && nightwatch -e mobile --tag mobile && nightwatch -e firefox -t tests/teslaShop.js
+
+//I have to run them seperate because my machine is too slow to run multiple.

@@ -5,9 +5,9 @@
 
   <testsuite name="teslaShopM"
     errors="0" failures="0" hostname="" id="" package="teslaShopM" skipped="0"
-    tests="1" time="25.02" timestamp="">
+    tests="1" time="36.60" timestamp="">
   
-    <testcase name="General Browsing on Mobile" classname="teslaShopM" time="25.02" assertions="15">
+    <testcase name="General Browsing on Mobile" classname="teslaShopM" time="36.60" assertions="15">
 
     
 
