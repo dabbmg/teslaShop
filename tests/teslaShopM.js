@@ -11,6 +11,10 @@ module.exports = {
     after: browser => {
         browser.end()
     },
+    'Mobile Login': browser => {
+        shopPage
+        .mobileLgn(browser)
+    },
     'General Browsing on Mobile': browser => {
         shopPage
         .mobile(browser)

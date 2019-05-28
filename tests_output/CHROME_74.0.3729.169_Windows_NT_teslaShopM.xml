@@ -5,27 +5,9 @@
 
   <testsuite name="teslaShopM"
     errors="0" failures="0" hostname="" id="" package="teslaShopM" skipped="0"
-    tests="1" time="36.60" timestamp="">
+    tests="1" time="12.28" timestamp="">
   
-    <testcase name="General Browsing on Mobile" classname="teslaShopM" time="36.60" assertions="15">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="Mobile Login" classname="teslaShopM" time="12.28" assertions="6">
 
     
 
